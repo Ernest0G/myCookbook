@@ -4,7 +4,7 @@ import { Register, Login } from './components'
 function App() {
   return (
     <div className="App">
-      <Login />
+      <Register />
     </div>
   );
 }

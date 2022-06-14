@@ -11,7 +11,7 @@ const Login = () => {
 
     const loginUser = () => {
         Axios.post("http://localhost:3001/authUser", { username, password }).then((response) => {
-            alert("User Login");
+            console.log("User Login");
         });
     };
     return (

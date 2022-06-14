@@ -12,7 +12,7 @@ const Register = () => {
 
     const createUser = () => {
         Axios.post("http://localhost:3001/newUser", { email, username, password }).then((response) => {
-            alert("User Created");
+            console.log("User Created");
         });
     };
     return (
