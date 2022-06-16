@@ -30,7 +30,8 @@ app.get("/authUser", async (req, res) => {
 });
 
 app.post("/newUser", async (req, res) => {
-    let user = await UserModel.findOne({ email: req.email });
+    console.log(req.body)
+    let user = await UserModel.findOne({ email: req.body.email });
     if (user) {
         return res.status(400).json({
             msg: "User Already Exists"

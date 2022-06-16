@@ -10,7 +10,7 @@ const Register = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const createUser = () => {
+    const register = () => {
         Axios.post("http://localhost:3001/newUser", { email, username, password }).then((response) => {
             console.log("User Created");
         });
@@ -44,7 +44,7 @@ const Register = () => {
                     minLength={8}
                     onChange={(event) => { setPassword(event.target.value) }}
                     required />
-                <button type="submit" id="register-submit" onClick={createUser}>Create Account</button>
+                <button type="submit" id="register-submit" onClick={register}>Create Account</button>
             </form>
 
         </div>
